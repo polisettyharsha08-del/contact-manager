@@ -1,0 +1,110 @@
+import datetime
+
+# Dictionary to store contacts    
+contacts = {}
+
+def current_time():
+    return datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+def add_contact():
+    name = input("Enter contact name: ")
+    phone = input("Enter phone number: ")
+
+    contacts[name] = {
+        "phone": phone,
+        "blocked": False,
+        "favorite": False,
+        "edited": current_time()
+    }
+    print("Contact added successfully!")
+
+def remove_contact():
+    name = input("Enter contact name to remove: ")
+    if name in contacts:
+        del contacts[name]
+        print("Contact removed.")
+    else:
+        print("Contact not found.")
+
+def block_contact():
+    name = input("Enter contact name to block: ")
+    if name in contacts:
+        contacts[name]["blocked"] = True
+        contacts[name]["edited"] = current_time()
+        print("Contact blocked.")
+    else:
+        print("Contact not found.")
+
+def activate_contact():
+    name = input("Enter contact name to activate: ")
+    if name in contacts:
+        contacts[name]["blocked"] = False
+        contacts[name]["edited"] = current_time()
+        print("Contact activated.")
+    else:
+        print("Contact not found.")
+
+def favorite_contact():
+    name = input("Enter contact name to favorite: ")
+    if name in contacts:
+        contacts[name]["favorite"] = True
+        contacts[name]["edited"] = current_time()
+        print("Added to favorites.")
+    else:
+        print("Contact not found.")
+
+def search_contact():
+    name = input("Enter contact name to search: ")
+    if name in contacts:
+        print("----- Contact Found -----")
+        print("Name:", name)
+        print("Phone:", contacts[name]["phone"])
+        print("Blocked:", contacts[name]["blocked"])
+        print("Favorite:", contacts[name]["favorite"])
+        print("Last Edited:", contacts[name]["edited"])
+    else:
+        print("Contact not found.")
+
+def show_all_contacts():
+    if not contacts:
+        print("No contacts available.")
+        return
+
+    print("\n------ All Contacts ------")
+    for name, info in contacts.items():
+        print(f"Name: {name}, Phone: {info['phone']}, Blocked: {info['blocked']}, Favorite: {info['favorite']}, Edited: {info['edited']}")
+    print("--------------------------\n")
+
+# ---------- Main Menu ----------
+while True:
+    print("\n===== Contact Manager =====")
+    print("1. Add Contact")
+    print("2. Remove Contact")
+    print("3. Block Contact")
+    print("4. Activate Contact")
+    print("5. See All Contacts")
+    print("6. Search Contact")
+    print("7. Favorite Contact")
+    print("8. Exit")
+
+    choice = input("Enter your choice: ")
+
+    if choice == "1":
+        add_contact()
+    elif choice == "2":
+        remove_contact()
+    elif choice == "3":
+        block_contact()
+    elif choice == "4":
+        activate_contact()
+    elif choice == "5":
+        show_all_contacts()
+    elif choice == "6":
+        search_contact()
+    elif choice == "7":
+        favorite_contact()
+    elif choice == "8":
+        print("Exiting Contact Manager...")
+        break
+    else:
+        print("Invalid choice, try again.")
