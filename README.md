@@ -9,15 +9,15 @@ User interaction using the input() function.
 Control flow with if/elif/else statements and a while loop for the main menu.
 The use of the datetime module to timestamp changes.
 Requirements:
-3.1 Software Requirements
+Software Requirements:
 Python 3.x
 Any code editor or IDE (VS Code, PyCharm, etc.)
 Command-line interface (Terminal or Command Prompt)
-3.2 Hardware Requirements
+Hardware Requirements:
 Basic computer system capable of running Python
 Minimum 2GB RAM
 Storage for Python installation and project files
-Functional Requirements
+Functional Requirements:
 Add Contact:User enters a name and phone number.
 System stores the contact with default status:
 blocked = False
