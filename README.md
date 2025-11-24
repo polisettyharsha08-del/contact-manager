@@ -2,21 +2,8 @@ contact-manager
 ⁂Users can add, remove, block, activate, favorite, and search contacts in this dictionary-based Python contact manager.  The datetime module is used to store each contact's phone number, status, and last edited time.  User selections are handled by a menu-driven loop that shows all saved contacts and updates information whenever modifications are made.
 <img width="368" height="647" alt="image" src="https://github.com/user-attachments/assets/8c9770fe-6f00-4023-b22d-8113259ca537" />
 Objective:
-The primary objective of this project is to create a functional, menu-driven program that demonstrates fundamental Python concepts, including:
-Dictionary usage for structured data storage (key-value pairs and nested dictionaries).
-Function definitions to compartmentalize business logic.
-User interaction using the input() function.
-Control flow with if/elif/else statements and a while loop for the main menu.
-The use of the datetime module to timestamp changes.
-Requirements:
-Software Requirements:
-Python 3.x
-Any code editor or IDE (VS Code, PyCharm, etc.)
-Command-line interface (Terminal or Command Prompt)
-Hardware Requirements:
-Basic computer system capable of running Python
-Minimum 2GB RAM
-Storage for Python installation and project files
+This project's main goal is to develop a useful, menu-driven application that illustrates key Python concepts, such as:  Using dictionaries to store structured data (nested dictionaries and key-value pairs).  To divide up business logic, use function definitions.  The input() function is used for user interaction.  For the main menu, use a while loop and if/elif/else statements to control flow.  Changes are timestamped using the datetime module.
+Conditions:  Software Requirements:  Python 3.x  Any IDE or code editor (such as PyCharm, VS Code, etc.)  Terminal or Command Prompt are examples of command-line interfaces.  Hardware specifications:  A simple computer system that can run Python  A minimum of 2GB of RAM  Storage for project files and Python installations
 Functional Requirements:
 Add Contact:User enters a name and phone number.
 System stores the contact with default status:
