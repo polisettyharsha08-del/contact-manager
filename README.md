@@ -1,5 +1,5 @@
 contact-manager
-⁂This Python Contact Manager stores contacts in a dictionary and lets users add, remove, block, activate, favorite, and search them. Each contact saves phone number, status, and last edited time using the datetime module. A menu-driven loop handles user choices and displays all saved contacts, updating details whenever changes are made
+⁂Users can add, remove, block, activate, favorite, and search contacts in this dictionary-based Python contact manager.  The datetime module is used to store each contact's phone number, status, and last edited time.  User selections are handled by a menu-driven loop that shows all saved contacts and updates information whenever modifications are made.
 <img width="368" height="647" alt="image" src="https://github.com/user-attachments/assets/8c9770fe-6f00-4023-b22d-8113259ca537" />
 Objective:
 The primary objective of this project is to create a functional, menu-driven program that demonstrates fundamental Python concepts, including:
